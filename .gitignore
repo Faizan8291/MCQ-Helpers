@@ -1,0 +1,5 @@
+# Local MySQL instance (data + logs) created for development
+/.mysql/
+
+# Maven
+backend/target/

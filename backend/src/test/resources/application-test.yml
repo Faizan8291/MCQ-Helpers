@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: ${TEST_DB_URL:jdbc:mysql://127.0.0.1:3307/mcq_test?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${TEST_DB_USER:mcq}
+    password: ${TEST_DB_PASSWORD:mcq_dev_pass}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+logging:
+  level:
+    org.hibernate.SQL: warn
